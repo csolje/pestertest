@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="13" errors="0" failures="0" not-run="0" inconclusive="1" ignored="1" skipped="0" invalid="0" date="2016-05-25" time="19:20:04">
+  <environment user="arcan_001" machine-name="ARCANE-VM" cwd="C:\PS\Pester-course\demo\completed-final-module\Podcast-Database" user-domain="ARCANE-VM" platform="Microsoft Windows 8.1 Pro|C:\Windows|\Device\Harddisk0\Partition4" nunit-version="2.5.8.0" os-version="6.3.9600" clr-version="4.0.30319.34209" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Powershell" name="Pester" executed="True" result="Ignored" success="True" time="0.6375" asserts="0">
+    <results>
+      <test-suite type="TestFixture" name="New-PodcastTable Tests" executed="True" result="Ignored" success="True" time="0.6375" asserts="0" description="New-PodcastTable Tests">
+        <results>
+          <test-case description="called all verifiable mocks" name="New-PodcastTable Tests.called all verifiable mocks" time="0.3855" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="called the Mock for Test-PodcastTable" name="New-PodcastTable Tests.called the Mock for Test-PodcastTable" time="0.0287" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="new table TestTable1 should exist" name="New-PodcastTable Tests.new table TestTable1 should exist" time="0.0129" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="TestTable1 should have column name Title " name="New-PodcastTable Tests.TestTable1 should have column name Title " time="0.0116" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="TestTable1 should have column name ShowUrl " name="New-PodcastTable Tests.TestTable1 should have column name ShowUrl " time="0.0154" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="TestTable1 should have column name EmbeddedHTML " name="New-PodcastTable Tests.TestTable1 should have column name EmbeddedHTML " time="0.0089" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="TestTable1 should have column name Hosts " name="New-PodcastTable Tests.TestTable1 should have column name Hosts " time="0.0086" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="TestTable1 should have column name PublicationDate " name="New-PodcastTable Tests.TestTable1 should have column name PublicationDate " time="0.0247" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="TestTable1 should have column name ImageUrl " name="New-PodcastTable Tests.TestTable1 should have column name ImageUrl " time="0.0311" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="TestTable1 should have column name AudioUrl " name="New-PodcastTable Tests.TestTable1 should have column name AudioUrl " time="0.0268" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="TestTable1 should have column name AudioLength " name="New-PodcastTable Tests.TestTable1 should have column name AudioLength " time="0.041" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="should have dropped test table TestTable1 as part of the test cleanup" name="New-PodcastTable Tests.should have dropped test table TestTable1 as part of the test cleanup" time="0.0292" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="has a skipped test" name="New-PodcastTable Tests.has a skipped test" time="0.0081" asserts="0" success="True" result="Ignored" executed="False" />
+          <test-case description="has a pending test" name="New-PodcastTable Tests.has a pending test" time="0.005" asserts="0" success="True" result="Inconclusive" executed="True" />
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
