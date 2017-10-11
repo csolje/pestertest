@@ -2,7 +2,6 @@ $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 $module = 'Podcast-NoAgenda'
 
-
 Describe "$module Module Tests" {
 	Context 'Module Setup' {
 		It "has the root module $module.psm1" {
@@ -24,47 +23,23 @@ Describe "$module Module Tests" {
 			$null = [System.Management.Automation.PSParser]::Tokenize($psFile, [ref]$errors)
 			$errors.Count | Should Be 0
 		}
+	} # Centext 'Module Setup'
+
+	$functions = ('Get-NoAgenda',
+				  'Get-PodcastData',
+				  'Get-PodcastMedia',
+				  'Get-PodcastImage',
+				  'ConvertTo-PodcastHtml',
+				  'ConvertTo-PodcastXML',
+				  'Write-PodcastHtml',
+				  'Write-PodcastXML'
+				  )
+
+	foreach ($function in $functions) {
+		Context "Test Function $function" {
+			It "$function.ps1 should exist" {
+				"$here\function-$function.ps1" | Should Exist
+			}
+		} # Context 'Test Function'
 	}
-} # Centext 'Module Setup'
-
-	Context {
-		It "Get-NoAgenda.ps1 should exist" {
-			"$here\Get-NoAgenda.ps1" | Should Exist
-		}
-
-		It "Get-PodcastData.ps1 should exist" {
-			"$here\function-Get-PodcastData.ps1" | Should Exist
-		}
-
-		It "Get-PodcastMedia.ps1 should exist" {
-			"$here\function-Get-PodcastMedia.ps1" | Should Exist
-		}
-
-		It "Get-PodcastImage.ps1 should exist" {
-			"$here\function-Get-PodcastImage.ps1" | Should Exist
-		}
-
-		It "ConvertTo-PodcastHtml.ps1 should exist" {
-			"$here\function-ConvertTo-PodcastHtml.ps1" | Should Exist
-		}
-
-		It "ConvertTo-PodcastXML.ps1 should exist" {
-			"$here\function-ConvertTo-PodcastXML.ps1" | Should Exist
-		}
-		
-		It "Write-PodcastHtml should exist" {
-			"$here\function-Write-PodcastHtml.ps1" | Should Exist
-		}
-
-		It "Write-PodcastXML.ps1 should exist" {
-			"$here\function-Write-PodcastXML.ps1" | Should Exist
-		}
-
-		It "Format-PodcastHtml.ps1 should exist" {
-			"$here\function-Format-PodcastHtml.ps1" | Should Exist
-		}
-
-		It "Format-PodcastXML.ps1 should exist" {
-			"$here\function-Format-PodcastXML.ps1" | Should Exist
-		}
-	}
+}
