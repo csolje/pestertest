@@ -75,6 +75,12 @@ Describe "$module Module Tests" {
 				$null = [System.Management.Automation.PSParser]::Tokenize($psFile, [ref]$errors)
 				$errors.Count | Should Be 0
 			}
-		} # Context 'Test Function'
-	}
+		} # Context 'Test Function $function'
+
+		Context "$function has tests" {
+			It "function-$($function).Tests.ps1 should exist" {
+				"function-$($function).Tests.ps1" | Should Exist
+			}
+		}
+	} # foreach ($function in $functions)
 }
